@@ -1,2 +1,2 @@
-# sbt-social-network
-Small social network prototype
+# Small social network prototype
+Homework 8.
