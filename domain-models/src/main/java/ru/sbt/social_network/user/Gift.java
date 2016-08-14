@@ -13,7 +13,7 @@ public class Gift {
         this.price = price;
     }
 
-    public int getGiftId() {
+    public int getId() {
         return giftId;
     }
 

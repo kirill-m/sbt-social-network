@@ -15,7 +15,6 @@
         <module>user-profile</module>
         <module>domain-models</module>
         <module>dialog</module>
-        <module>gift-shop</module>
     </modules>
 
     <build>

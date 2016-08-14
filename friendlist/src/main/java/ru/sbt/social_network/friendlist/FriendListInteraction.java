@@ -2,7 +2,7 @@ package ru.sbt.social_network.friendlist;
 
 import ru.sbt.social_network.user.User;
 
-import java.util.List;
+import java.util.Set;
 
 /**
  * Created by kirill on 14.08.16.
@@ -13,5 +13,5 @@ public interface FriendListInteraction {
 
     void removeFriend(int userId, int friendId);
 
-    List<User> getFriendList(int userId);
+    Set<User> getFriendList(int userId);
 }
