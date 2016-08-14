@@ -10,7 +10,7 @@ build/
 .classpath
 .project
 .settings
-.idea/
+/.idea/*
 classes/
 secret.properties
 service.properties
