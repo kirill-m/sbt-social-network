@@ -80,12 +80,17 @@ public class DatabaseImpl implements Database {
 
     @Override
     public Chat getChat(int userId1, int userId2) {
-        return new Chat(1, 1, 2, new ArrayList<>());
+        Integer chatId = generateChatId(userId1, userId2);
+        return new Chat(chatId, 1, 2, new ArrayList<>());
     }
 
     @Override
     public void addChat(int userId1, int userId2) {
-        int newChatId = dialogs.size() + 1;
-        dialogs.put(newChatId, new Chat(newChatId, userId1, userId2, new ArrayList<Message>()));
+        Integer chatId = generateChatId(userId1, userId2);
+        dialogs.put(chatId, new Chat(chatId, userId1, userId2, new ArrayList<>()));
+    }
+
+    private int generateChatId(int userId1, int userId2) {
+        return Integer.valueOf("" + userId1 + userId2);
     }
 }

@@ -1,17 +1,19 @@
 package ru.sbt.social_network.dialog;
 
 import ru.sbt.social_network.database.Database;
-import ru.sbt.social_network.database.DatabaseImpl;
 import ru.sbt.social_network.user.Message;
 
-import java.util.HashMap;
 import java.util.List;
 
 /**
  * Created by kirill on 14.08.16
  */
 public class DialogImpl implements Dialog {
-    private final Database db = new DatabaseImpl(new HashMap<>(), new HashMap<>(), new HashMap<>(), new HashMap<>());
+    private final Database db;
+
+    public DialogImpl(Database db) {
+        this.db = db;
+    }
 
     @Override
     public List<Message> loadHistory(int userOneId, int userTwoId) {
